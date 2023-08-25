@@ -1,0 +1,10 @@
+.DS_store
+config/settings.json
+*.json
+bin
+obj
+*.csproj
+*.ini
+*.cache
+*.log
+*.tmp

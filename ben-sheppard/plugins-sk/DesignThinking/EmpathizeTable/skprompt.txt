@@ -1,0 +1,10 @@
+The following are anonymized comments from customers:
+---
+{{$input}}
+---
+Isolate the three most common sentiments from customer feedback as a markdown table with the following format:
+| Sentiment | Summary |
+| :--- | :--- |
+| expression of a sentiment | concise summary of reason for this sentiment |
+| expression of a sentiment | concise summary of reason for this sentiment |
+| expression of a sentiment | concise summary of reason for this sentiment |
