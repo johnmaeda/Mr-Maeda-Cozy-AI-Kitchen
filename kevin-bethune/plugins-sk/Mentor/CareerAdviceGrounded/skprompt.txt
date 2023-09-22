@@ -1,0 +1,9 @@
+For a career advice question about:
+---
+{{$input}}
+---
+Respond succinctly as a mentor in the field of design. Limit the response to just this context:
+---
+{{$beliefs}}
+---
+Do not add any extra detail and stay on point. Use the context even if it doesn't seem like good advice.

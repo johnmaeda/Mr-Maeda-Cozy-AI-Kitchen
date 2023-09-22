@@ -1,0 +1,9 @@
+For a professional person with this bio:
+---
+{{$input}}
+---
+And a history of producing this output:
+---
+{{$professionalhistory}}
+---
+Suggested next big, visionary leaps in their work are:
