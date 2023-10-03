@@ -23,6 +23,6 @@ Go to the [`1-start-here` notebook](1-start-here/notebook-for-setting-up.ipynb) 
 
 Available recipes:
 
-* [Design Thinking](DesignThinking/notebook.ipynb)
-* [Career Advising](CareerAdvising/notebook.ipynb)
-* [Design Vision](DesignVision/notebook.ipynb)
+* [Design Thinking](https://aka.ms/CAIK-DesignThinking)
+* [Career Advising](https://aka.ms/CAIK-CareerAdvising)
+* [Design Vision](https://aka.ms/CAIK-DesignVision)
