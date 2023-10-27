@@ -1,5 +1,0 @@
-For a career advice question about:
----
-{{$input}}
----
-Respond succinctly as a mentor in the field of design.

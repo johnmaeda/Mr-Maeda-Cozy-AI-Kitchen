@@ -1,0 +1,5 @@
+For events that have transpired:
+---
+{{$input}}
+---
+A situation report that considers all of these events written to be appropriate for a security director that's looking for patterns is as follows:

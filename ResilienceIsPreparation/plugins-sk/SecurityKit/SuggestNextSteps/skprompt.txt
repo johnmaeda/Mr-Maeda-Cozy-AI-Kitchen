@@ -1,0 +1,5 @@
+For events that have transpired:
+---
+{{$input}}
+---
+Predict what will happen next:
