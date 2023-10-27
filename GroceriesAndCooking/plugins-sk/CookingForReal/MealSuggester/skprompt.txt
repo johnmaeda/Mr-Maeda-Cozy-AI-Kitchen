@@ -1,0 +1,13 @@
+Our goal is to make:
+---
+{{$mealtype}}
+---
+We have available on hand:
+---
+{{$available}}
+---
+Optionally, and if we go shopping, we can purchase items within the range of:
+---
+{{$grocer}}
+---
+The meal we will make expressed in two or three sentences:

@@ -1,0 +1,13 @@
+The following items are available at the local grocer:
+---
+{{$grocer}}
+---
+And the on-hand ingredients in the kitchen are:
+---
+{{$available}}
+---
+Our goal is to make:
+---
+{{$themeal}}
+---
+What items should be picked up at the grocer?

@@ -1,6 +1,5 @@
 .DS_store
 config/settings.json
-*.json
 bin
 obj
 *.csproj
