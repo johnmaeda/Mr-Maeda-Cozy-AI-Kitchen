@@ -1,0 +1,5 @@
+The following is a meal description:
+---
+{{$mealdescription}}
+---
+A suitable prompt for an AI image generation model to render this meal described is:
