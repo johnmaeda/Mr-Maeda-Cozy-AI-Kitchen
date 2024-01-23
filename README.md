@@ -21,7 +21,7 @@ Go to the [`1-start-here` notebook](1-start-here/notebook-for-setting-up.ipynb) 
 
 ### Step 3: Now go ahead and run any of the C# notebooks
 
-Available recipes:
+Available recipes include:
 
 * [Design Thinking](https://aka.ms/CAIK-DesignThinking)
 * [Career Advising](https://aka.ms/CAIK-CareerAdvising)
