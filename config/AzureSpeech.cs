@@ -88,7 +88,7 @@ public class SpeechRecognitionService
         using var result = await synthesizer.SpeakTextAsync(text);
         if (result.Reason == ResultReason.SynthesizingAudioCompleted)
         {
-            Console.WriteLine($"Spoke: \"{text}\"");
+         //   Console.WriteLine($"Spoke: \"{text}\"");
         }
         else if (result.Reason == ResultReason.Canceled)
         {
