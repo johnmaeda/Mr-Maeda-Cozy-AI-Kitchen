@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mary Had a Little Lamb</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/tone/14.8.49/Tone.js"></script>
+</head>
+<body>
+    <h1>Mary Had a Little Lamb - Tone.js</h1>
+    <button id="play">Play Song</button>
+
+    <script>
+        const synth = new Tone.Synth().toDestination();
+
+        document.getElementById('play').addEventListener('click', () => {
+            const now = Tone.now();
+
+            // Melody: E4 D4 C4 D4 E4 E4 E4, D4 D4 D4, E4 G4 G4
+            // Rhythm: 4 4 4 4 4 4 8, 4 4 8, 4 4 4
+            let melody = ["E4", "D4", "C4", "D4", "E4", "E4", "E4", "D4", "D4", "D4", "E4", "G4", "G4", "E4", "D4", "C4", "D4", "E4", "E4", "E4", "E4", "D4", "D4", "E4", "D4", "C4"];
+            let rhythm = [0.5, 0.5, 0.5, 0.5, 0.5, 0.5, 1, 0.5, 0.5, 1, 0.5, 0.5, 0.5, 0.5, 0.5, 0.5, 0.5, 0.5, 0.5, 0.5, 1, 0.5, 0.5, 0.5, 0.5, 1];
+
+            melody.forEach((note, index) => {
+                let time = rhythm.slice(0, index).reduce((a, b) => a + b, 0);
+                synth.triggerAttackRelease(note, rhythm[index] + "n", now + time);
+            });
+        });
+    </script>
+</body>
+</html>

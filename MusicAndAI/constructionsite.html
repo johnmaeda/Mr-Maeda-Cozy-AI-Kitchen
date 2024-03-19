@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Construction Site Symphony</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/tone/14.8.49/Tone.js"></script>
+</head>
+<body>
+    <h1>Construction Site Symphony - Tone.js</h1>
+    <button id="play">Play the Construction Site Symphony</button>
+
+    <script>
+        const metalSynth = new Tone.MetalSynth({
+            frequency: 200,
+            envelope: { attack: 0.001, decay: 1.4, release: 0.2 },
+            harmonicity: 5.1,
+            modulationIndex: 32,
+            resonance: 4000,
+            octaves: 1.5
+        }).toDestination();
+
+        const noiseSynth = new Tone.NoiseSynth({
+            noise: { type: 'white' },
+            envelope: { attack: 0.005, decay: 0.1, sustain: 0.05 }
+        }).toDestination();
+
+        const beepSynth = new Tone.Synth({
+            oscillator: { type: 'square' },
+            envelope: { attack: 0.01, decay: 0.2, sustain: 0, release: 0.2 }
+        }).toDestination();
+
+        document.getElementById('play').addEventListener('click', () => {
+            Tone.Transport.bpm.value = 120;
+            Tone.Transport.start();
+            
+            // Simulate metallic clangs
+            Tone.Transport.scheduleRepeat(time => {
+                metalSynth.triggerAttackRelease("C2", "8n", time);
+            }, "2n");
+
+            // Simulate background construction noise
+            Tone.Transport.scheduleRepeat(time => {
+                noiseSynth.triggerAttackRelease("4n", time);
+            }, "4n", "1m");
+
+            // Simulate beeping noises
+            Tone.Transport.scheduleRepeat(time => {
+                beepSynth.triggerAttackRelease("B4", "16n", time);
+                beepSynth.triggerAttackRelease("B4", "16n", time + 0.5);
+            }, "1n", "2m");
+        });
+    </script>
+</body>
+</html>

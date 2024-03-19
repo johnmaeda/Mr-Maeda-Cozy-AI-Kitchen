@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Kaki King Style Melody Example with Tone.js</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/tone/14.8.49/Tone.js"></script>
+</head>
+<body>
+    <h1>Kaki King Style Melody with Tone.js</h1>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const synth = new Tone.PolySynth(Tone.Synth).toDestination();
+    
+            const sequence = new Tone.Sequence((time, note) => {
+                synth.triggerAttackRelease(note, 0.5, time);
+            }, [
+                "C4", "E4", "G4", "A4",
+                "G4", "E4", "C4", "E4",
+                "A4", "G4", "E4", "C4",
+                "E4", "A4", "G4", "E4"
+            ], "4n");
+
+            Tone.Transport.start();
+            sequence.start();
+        });
+    </script>
+</body>
+</html>
