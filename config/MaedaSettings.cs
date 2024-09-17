@@ -4,7 +4,7 @@ using System.Text.Json;
 using System.Collections.Generic;
 using System.Threading.Tasks;
 using Microsoft.Extensions.Configuration;
-using Microsoft.DotNet.Interactive;
+using InteractiveKernel = Microsoft.DotNet.Interactive.Kernel;
 
 public class MaedaSettings
 {
