@@ -173,6 +173,23 @@ public static class Settings
         }
     }
 
+    // Read extra strings from the config file given a key name
+    public static string ReadString(string key, string configFile = DefaultConfigFile)
+    {
+        if (!File.Exists(configFile)) { return ""; }
+
+        try
+        {
+            var config = JsonSerializer.Deserialize<Dictionary<string, string>>(File.ReadAllText(configFile));
+            return config[key];
+        }
+        catch (Exception e)
+        {
+            Console.WriteLine("Something went wrong: " + e.Message);
+            return "";
+        }
+    }
+
     // Read and return settings from file
     private static (bool useAzureOpenAI, string model, string azureEndpoint, string apiKey, string orgId)
         ReadSettings(bool _useAzureOpenAI, string configFile)

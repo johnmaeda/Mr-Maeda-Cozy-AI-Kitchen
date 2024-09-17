@@ -62,4 +62,15 @@ public static class Utils
             return null;
         }
     }
+
+    public static string ObfuscateString(string input)
+    {
+        if (string.IsNullOrEmpty(input))
+        {
+            return input;
+        }
+
+        int halfLength = input.Length / 2;
+        return input.Substring(0, halfLength) + "...";
+    }
 }
