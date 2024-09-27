@@ -1,5 +1,6 @@
 .DS_store
 config/settings.json
+credentials.json
 .env
 bin
 obj
