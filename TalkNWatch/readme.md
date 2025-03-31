@@ -11,15 +11,15 @@ This is based upon the Azure Samples ["Realtime Audio"](https://github.com/azure
 
 3. Make sure you have two model deployments: a realtime audio model and a gpt4o or 4o-mini model
 
-@[](assets/twomodels.png)
+![](assets/twomodels.png)
 
 4. Copy over the realtime info and you can start talking to the model
 
-@[](assets/audio.png)
+![](assets/audio.png)
 
 5. Copy over the 4o-mini or gpt4o info and you can do image analysis of a screenshare
 
-@[](assets/vision.png)
+![](assets/vision.png)
 
 Enjoy!
 
