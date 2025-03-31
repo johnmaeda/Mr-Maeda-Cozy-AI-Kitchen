@@ -1,0 +1,115 @@
+<!--
+// Copyright (c) Microsoft Corporation.
+// Licensed under the MIT license.
+-->
+
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Realtime API with openai-node SDK</title>
+</head>
+
+<body>
+  <div id="app">
+    <form>
+      <div class="container">
+        <div class="main-content">
+          <div id="screen-capture-container">
+            <div class="screen-capture-controls">
+              <button id="start-screen-capture" type="button">Start Screen Share</button>
+              <button id="stop-screen-capture" type="button" disabled>Stop Screen Share</button>
+              <button id="analyze-screen" type="button" disabled>Analyze Screen</button>
+              <div class="auto-analyze-controls">
+                <input type="number" id="analyze-interval" value="5000" min="1000" step="500" />
+                <label for="auto-analyze">ms&nbsp;autocapture</label>
+                <input type="checkbox" id="auto-analyze" />
+              </div>
+            </div>
+            <video id="screen-display" autoplay playsinline></video>
+          </div>
+          <div id="received-text-container"></div>
+        </div>
+        <div class="controls">
+          <div class="realtime-api-settings">
+            <div class="toggle-group">
+              <label for="azure-toggle">Azure&nbsp;OpenAI</label>
+              <input id="azure-toggle" type="checkbox" checked />
+            </div>            
+            <label for="endpoint">Realtime Endpoint</label>
+            <input id="endpoint" type="text" placeholder="Realtime endpoint URL" />
+            
+            <label for="api-key">Realtime API Key</label>
+            <input id="api-key" type="password" placeholder="Realtime API key" />
+
+            
+            <label for="deployment-or-model">Deployment</label>
+            <input 
+              id="deployment-or-model" 
+              type="text" 
+              value="gpt-4o-realtime-preview"
+              placeholder="Model e.g. gpt-4o-realtime-preview" 
+            />
+          </div>
+
+          <div class="vision-api-settings">
+            <label for="vision-endpoint">Vision Endpoint</label>
+            <input id="vision-endpoint" type="text" placeholder="gpt-4o or gpt-4o-mini endpoint URL" />
+            
+            <label for="vision-api-key">Vision API Key</label>
+            <input id="vision-api-key" type="password" placeholder="AOAI API key" />
+            
+            <label for="vision-deployment">Deployment</label>
+            <input 
+              id="vision-deployment" 
+              type="text" 
+              value="gpt-4o-mini"
+              placeholder="Model e.g. gpt-4o or gpt-4o-mini" 
+            />
+          </div>
+       
+
+        <div class="input-group">
+          <div class="button-group">
+            <button id="start-recording" type="button">Record</button>
+            <button id="stop-recording" type="button" disabled="true">Stop</button>
+          </div>
+          <div class="input-group">
+            <label for="session-instructions">System Message</label>
+            <textarea id="session-instructions" placeholder="Optional instructions for the session, e.g. 'You talk like a pirate.'" rows="4">A friendly observer of the browsing behavior of a user, and wanting to help them understand what they're doing. Always being concise.</textarea>
+          </div>
+          <div class="input-group">
+            <label for="temperature">Temperature</label>
+            <input id="temperature" type="number" min="0.6" max="1.2" step="0.05" placeholder="0.6-1.2 (default 0.8)"/>
+          </div>
+          <div class="input-group">
+            <label for="voice">Voice</label>
+            <select id="voice">
+              <option value="alloy" selected>alloy</option>
+              <option>ash</option>
+              <option>ballad</option>
+              <option>coral</option>
+              <option>echo</option>
+              <option>sage</option>
+              <option>shimmer</option>
+              <option>verse</option>
+            </select>
+          </div>
+          <div class="button-group">
+            <button id="clear-all" type="button" class="secondary">Clear all</button>
+          </div>
+          <div class="button-group">
+            <button id="inject-mona-lisa" type="button" class="secondary">Mona Mode</button>
+          </div>
+        </div>
+      </div>
+    </div>
+    </form>
+  </div>
+  <script type="module" src="/src/main.ts"></script>
+</body>
+
+</html>

@@ -10,3 +10,4 @@ obj
 *.log
 *.tmp
 .vscode/*
+TalkNWatch/node_modules/*
