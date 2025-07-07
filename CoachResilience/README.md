@@ -2,11 +2,7 @@
 
 There's a lot changing right now, and it's helpful to have research-backed advice on how to manage through it. More on that compendium is from the 2022 SXSW report I gave on the topic:
 
-<iframe width="560" height="315" 
-  src="https://www.youtube.com/embed/wuOfuA1c5I8" 
-  title="YouTube video player" frameborder="0" 
-  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
-  allowfullscreen></iframe>
+[![IMAGE ALT TEXT HERE](https://img.youtube.com/vi/wuOfuA1c5I8/0.jpg)](https://www.youtube.com/watch?v=wuOfuA1c5I8)
 
 Here's some context that might be helpful in a system prompt near you!
 
